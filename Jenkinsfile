@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat ' \'echo %PATH%\''
+        bat(script: ' \'start cmd.exe /c npm install\'', returnStatus: true)
       }
     }
   }
